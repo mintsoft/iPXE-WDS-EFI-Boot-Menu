@@ -1,6 +1,6 @@
 # iPXE + WDS + EFI Boot Menu #
 
-This is useful to have a netboot delivered menu so that logic can be added for certain types of machines (i.e. I always want a `Dell Optiplex 3050` to use WDS vs a `Dell R430` to netboot the Linux installer) as well as provide admins the ability to chose the OS etc.
+This is useful to have a netboot delivered menu so that logic can be added for certain types of machines (i.e. I always want a `Dell Optiplex 3050` to use WDS vs a `Dell R430` to netboot the Linux installer) as well as provide admins the ability to choose the OS or debugging utilities etc whilst still providing zero touch WDS provisioning.
 
 * With the actual content of the files in the repository as well as the instructions; removed the references to PXELinux and Grub2 as neither works well with netboot + EFI at the current time.
 
