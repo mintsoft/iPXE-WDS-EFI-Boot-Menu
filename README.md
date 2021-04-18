@@ -1,5 +1,5 @@
-# Repository copy of https://gist.github.com/mintsoft/e4bf8391cdc3a9d9014b185897cef41c #
-With the actual content of the files in the repository as well as the instructions
+# Repository copy of [this Gist](https://gist.github.com/mintsoft/e4bf8391cdc3a9d9014b185897cef41c) #
+With the actual content of the files in the repository as well as the instructions; removed the references to PXELinux and Grub2 as neither works well with netboot + EFI at the current time.
 
 # A pre-boot menu for EFI that allows WDS by default and selection of others manually #
 
