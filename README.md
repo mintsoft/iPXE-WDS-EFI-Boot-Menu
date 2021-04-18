@@ -2,8 +2,9 @@
 With the actual content of the files in the repository as well as the instructions; removed the references to PXELinux and Grub2 as neither works well with netboot + EFI at the current time.
 
 # A pre-boot menu for EFI that allows WDS by default and selection of others manually #
-
 ## Delivered entirely from WDS ##
+
+This has the advantage that if you already have a WDS infrastructure for deploying windows (which presumably you do, if you're installing Windows desktops) then you don't require a separate/additional TFTP setup for deploying linux etc.
 
 1. Create a folder under `REMINST\Boot` for iPXE like: `REMINST\Boot\iPXE`
 2. Download `snmponly.efi` for iPXE from http://boot.ipxe.org/snponly.efi and store as `REMINST\Boot\iPXE\snponly.efi`
