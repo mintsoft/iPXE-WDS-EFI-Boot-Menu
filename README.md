@@ -1,3 +1,6 @@
+# Repository copy of https://gist.github.com/mintsoft/e4bf8391cdc3a9d9014b185897cef41c #
+With the actual content of the files in the repository as well as the instructions
+
 # A pre-boot menu for EFI that allows WDS by default and selection of others manually #
 
 ## Delivered entirely from WDS ##
@@ -90,17 +93,3 @@ goto start
 
 This is assuming that you have downloaded the Debian netboot.tar.gz (i.e. http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/netboot.tar.gz) and extracted the content to `REMINST\Boot\iPXE\debian-installer`. 
 
-## Optional: Alter WDS TFTP to support both `\` and `/` ##
-This will be required if you want to boot grub2 or pxelinux; ipxe doesn't require it however :D
-
-1. Make WDS TFTP server accept both `/` and `\` 
-2. Alter: `HKEY_LOCAL_MACHINE/SYSTEM/CurrentControlSet/Services/WDSServer/Providers/WDSTFTP/ReadFilter` and make sure that following are included:
-```
-boot/*
-boot\*
-/boot/*
-\boot\*
-/boot\*
-```
-
-3. Restart the `Windows Deployment Services` Service
