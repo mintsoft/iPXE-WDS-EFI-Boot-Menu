@@ -1,5 +1,10 @@
-# Repository copy of [this Gist](https://gist.github.com/mintsoft/e4bf8391cdc3a9d9014b185897cef41c) #
-With the actual content of the files in the repository as well as the instructions; removed the references to PXELinux and Grub2 as neither works well with netboot + EFI at the current time.
+# iPXE + WDS + EFI Boot Menu #
+
+This is useful to have a netboot delivered menu so that logic can be added for certain types of machines (i.e. I always want a `Dell Optiplex 3050` to use WDS vs a `Dell R430` to netboot the Linux installer) as well as provide admins the ability to chose the OS etc.
+
+* With the actual content of the files in the repository as well as the instructions; removed the references to PXELinux and Grub2 as neither works well with netboot + EFI at the current time.
+
+* Repository copy of [this Gist](https://gist.github.com/mintsoft/e4bf8391cdc3a9d9014b185897cef41c)
 
 ## A pre-boot menu for EFI that allows WDS by default and selection of others manually; delivered entirely from WDS ##
 
