@@ -1,8 +1,7 @@
 # Repository copy of [this Gist](https://gist.github.com/mintsoft/e4bf8391cdc3a9d9014b185897cef41c) #
 With the actual content of the files in the repository as well as the instructions; removed the references to PXELinux and Grub2 as neither works well with netboot + EFI at the current time.
 
-# A pre-boot menu for EFI that allows WDS by default and selection of others manually #
-## Delivered entirely from WDS ##
+## A pre-boot menu for EFI that allows WDS by default and selection of others manually; delivered entirely from WDS ##
 
 This has the advantage that if you already have a WDS infrastructure for deploying windows (which presumably you do, if you're installing Windows desktops) then you don't require a separate/additional TFTP setup for deploying linux etc.
 
@@ -10,7 +9,7 @@ This has the advantage that if you already have a WDS infrastructure for deployi
 2. Download `snmponly.efi` for iPXE from http://boot.ipxe.org/snponly.efi and store as `REMINST\Boot\iPXE\snponly.efi`
 3. It's critically important that in `WDS -> Server Properties -> Boot -> Unknown Clients` is set to `Always continue the PXE boot`
 
-## Windows DHCP Configuration ##
+### Windows DHCP Configuration ###
 
 1. Create User Class for iPXE (right click ipv4; click define user classes and name it iPXE and add `iPXE` as the ASCII value
 2. Create Vendor Class for EFI x64 (right click ipv4; click Vendor classes, name it `PXEClient:Arch:00007` and add `PXEClient:Arch:00007` as the ASCII value
@@ -19,7 +18,7 @@ This has the advantage that if you already have a WDS infrastructure for deployi
 5. Change the Policy Order so that "iPXE Configuration" is Processing Order 1 and Deliver iPXE is Processing Order 2
 6. Remove the PXEClient Option 60 from being set by any of the DHCP server settings (either Server Options or Scope Options) as this causes WDS to hijack the DHCP request
 
-## Configure iPXE menu ##
+### Configure iPXE menu ###
 1. Create the `REMIST\Boot\iPXE\iPXE.conf` file  with the following content:
 ```
 #!ipxe
