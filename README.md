@@ -22,6 +22,7 @@ This has the advantage that if you already have a WDS infrastructure for deployi
 4. Add policy to deliver the iPXE configuration when iPXE requests it :: At the same level as above, add a new Policy called "iPXE Configuration", add the condition the Vendor Class is `PXEClient:Arch:00007` with appended wildcard, change the radio to `AND` and User Class is `iPXE`. Set Bootfile name to the path to the iPXE configuration `Boot\iPXE\iPXE.conf`.
 5. Change the Policy Order so that "iPXE Configuration" is Processing Order 1 and Deliver iPXE is Processing Order 2
 6. Remove the PXEClient Option 60 from being set by any of the DHCP server settings (either Server Options or Scope Options) as this causes WDS to hijack the DHCP request
+7. Make sure option 66 (Boot Server Host Name) is set in either Server or Scope options so iPXE knows where to pull files from
 
 ### Configure iPXE menu ###
 1. Create the `REMIST\Boot\iPXE\iPXE.conf` file  with the following content:
