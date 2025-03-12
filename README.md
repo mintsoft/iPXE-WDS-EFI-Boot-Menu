@@ -11,7 +11,7 @@ This is useful to have a netboot delivered menu so that logic can be added for c
 This has the advantage that if you already have a WDS infrastructure for deploying windows (which presumably you do, if you're installing Windows desktops) then you don't require a separate/additional TFTP setup for deploying linux etc.
 
 1. Create a folder under `REMINST\Boot` for iPXE like: `REMINST\Boot\iPXE`
-2. Download `snmponly.efi` for iPXE from http://boot.ipxe.org/snponly.efi and store as `REMINST\Boot\iPXE\snponly.efi`
+2. Download `snponly.efi` for iPXE from http://boot.ipxe.org/snponly.efi and store as `REMINST\Boot\iPXE\snponly.efi`
 3. It's critically important that in `WDS -> Server Properties -> Boot -> Unknown Clients` is set to `Always continue the PXE boot`
 
 ### Windows DHCP Configuration ###
